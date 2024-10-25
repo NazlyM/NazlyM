@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web Bonita</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido al mundo de la tecnologia</h1>
+        <p><i>A lo largo de esta pagina web encontraras un magnifico experimento desarrollado por los estudiantes del Grado Decimo del Colegio San Carlos ubicado en la capital turistica de Santander.</i></p>
+    </header>
+
+    <section class="slideshow">
+        <div class="slides">
+            <img src="CARRITO.jpg" alt="Imagen 1" class="slide">
+            <img src="microbit.jpg" alt="Imagen 2" class="slide">
+            <img src="jovenes.jpg" alt="Imagen 3" class="slide">
+        </div>
+        <div class="caption">MICROBIT</div>
+        <p>La Microbit es una microcomputadora programable, equipada con varios sensores y componentes básicos que permiten desarrollar una amplia gama de aplicaciones. La BBC micro es una pequeña pero potente placa de desarrollo diseñada para fomentar el aprendizaje de la programación y la electrónica. Originalmente lanzada por la BBC en 2015 como parte de una iniciativa educativa, su propósito es acercar a estudiantes y entusiastas al mundo de la tecnología a través de proyectos creativos y prácticos.</p>
+        <div class="gallery">
+            <img src="TARJETA BOARD BBC.jpg" alt="Tarjeta Board BBC">
+        </div>
+    </section>
+
+    <section>
+        <h2>USO</h2>
+        <p>La Microbit se ha convertido en una herramienta educativa muy popular porque es accesible, fácil de usar y altamente versátil. Permite a los estudiantes aprender conceptos de programación básica, robótica, Internet de las Cosas (IoT) y ciencia aplicada de forma lúdica y experimental. Además, su entorno de desarrollo es amigable, ya que se puede programar usando MakeCode (programación en bloques), Python, o incluso JavaScript.</p>
+        <h2>APLICACIONES Y PROYECTOS</h2>
+        <p>Desde crear juegos interactivos hasta desarrollar sensores de seguridad, la Micro ofrece infinitas posibilidades. Algunos ejemplos de proyectos comunes incluyen:
+        <br>    
+            Termómetros digitales.
+        <br>
+            Brújulas electrónicas.
+        <br>
+            Juegos de reacción con LEDs y botones.
+        <br>
+            Controladores para vehículos o robots.</p>
+    </section>
+
+    <section>
+        <h2>MOTIONALERT</h2>
+        <p>Los cables Jumper, los cables cocodrilo, la batería 9v y porta baterías de 9v.</p>
+        <br>
+        <p>Para el procedimiento se armó a través de una caja la cual en su interior sobresale el sensor pir y la microbit arriba de ella recibiendo cuando no hay señal de movimiento se queda la luz estática pero cuando el sensor recibe el movimiento empieza a parpadear en el microbit la luz.</p>
+        <br>
+        <p>En makecode hacemos la programación del microbit utilizando los iconos necesarios para proceder a activar las figuras y letras que se van a mostrar en el y que den la acción de repetirse dos veces cuando perciba el movimiento y cuando no se esté percibiendo movimiento se repita una vez la frase y así programando el microbit con el sensor pir.</p>
+    </section>
+
+    <section class="gallery">
+        <h2>Galería de Fotos</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="foto_maqueta_1.jpeg" alt="Galería 1">
+            </div>
+            <div class="gallery-item">
+                <img src="microbit.jpg" alt="Galería 2">
+            </div>
+            <div class="gallery-item">
+                <img src="foto_maqueta_2.jpeg" alt="Galería 3">
+            </div>
+        </div>
+    </section>
+
+    <section class="qr-section">
+        <h2 >Código QR</h2>
+        <canvas id="qr-code"></canvas>
+        <button id="generate-qr">Generar Código QR</button>
+    </section>
+
+    <script>
+        document.getElementById('generate-qr').addEventListener('click', function () {
+            const qr = new QRious({
+                element: document.getElementById('qr-code'),
+                value: window.location.href, // URL de la página actual
+                size: 250 // Tamaño del código QR
+            });
+        });
+    </script>
+
+    <footer>
+        <p>COLEGIO SAN CARLOS</p>
+    </footer>
+</body>
+</html>
